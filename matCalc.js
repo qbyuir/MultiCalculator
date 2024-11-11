@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let viewer = document.querySelector('.viewer')
-    let equals = document.querySelector('.equals')
-    let clear = document.querySelector('.clear')
-    let nums = document.querySelectorAll('.num')
-    let ops = document.querySelectorAll('.ops')
+    var viewer = document.querySelector('.viewer')
+    var equals = document.querySelector('.equals')
+    var clear = document.querySelector('.clear')
+    var nums = document.querySelectorAll('.num')
+    var ops = document.querySelectorAll('.ops')
 
-    let theNum = ''
-    let prevNum = ''
-    let resultNum
-    let operator
+    var theNum = ''
+    var prevNum = ''
+    var resultNum
+    var operator
 
     nums.forEach((num) => {
         num.addEventListener('click', (e) => {
@@ -70,4 +70,36 @@ document.addEventListener('DOMContentLoaded', () => {
         resultNum = ''
         viewer.innerText = '0'
     })
+})
+
+const checkbox = document.querySelector('.checkbox')
+const scientificFunctions = document.querySelector('.scientificCalc')
+
+checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+        scientificFunctions.classList.add('show')
+    } else {
+        scientificFunctions.classList.remove('show')
+    }
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    var sin = document.querySelector('.sin')
+    var cos = document.querySelector('.cos')
+    var tan = document.querySelector('.tan')
+
+    sin.addEventListener('click', () => {
+        theNum = Math.sin(theNum)
+        viewer.innerText = theNum
+    })
+
+    cos.addEventListener('click', () => {
+        theNum = Math.cos(theNum)
+        viewer.innerText = theNum
+    })
+
+    tan.addEventListener('click', () => {
+        theNum = Math.tan(theNum)
+        viewer.innerText = theNum
+    })  
 })
