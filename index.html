@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#imc">Calculadora de IMC</a></li>
+                <li><a href="#matCalc">Calculadora Matemática</a></li>
+                <li><a href="#calorias">Calculadora de Calorias</a></li>
+            </ul>
+        </nav>
+        
+        <div class="calculator-section" id="imc">
+            <h2 class="imcTitle"> Calculadora IMC </h2>
+            
+            <div class="imc">
+                <div class="input-group">
+                    <h3>Altura</h3> 
+                    <input type="number" class="alt" placeholder="Ex.: 160"> </input>
+                </div>
+                
+                <div class="input-group">
+                    <h3>Peso (kg)</h3>
+                    <input type="number" class="peso" placeholder="Ex.: 57,2"> </input>
+                </div>
+                
+            </div>
+            
+            <div class="btn-container">
+                <button class="calcBtn">Calcular</button>
+                <button class="cleanBtn">Limpar</button>
+            </div>
+            
+            <p class="result"></p>
+        </div>
+    </div>
+        
+    <div class="calculator-section" id="matCalc">
+        <h2 class="matTitle">Calculadora Matemática</h2>
+
+        <div class="mat-calculator" id="mat-calculator">
+            <button class="clear" id="clear">C</button>
+            <div class="viewer" id="viewer">0</div>
+
+            <button class="num" data-num="7">7</button>
+            <button class="num" data-num="8">8</button>
+            <button class="num" data-num="9">9</button>
+            <button class="ops" data-ops="plus" id="plus">+</button>
+
+            <button class="num" data-num="4">4</button>
+            <button class="num" data-num="5">5</button>
+            <button class="num" data-num="6">6</button>
+            <button class="ops" data-ops="minus">-</button>
+
+            <button class="num" data-num="1">1</button>
+            <button class="num" data-num="2">2</button>
+            <button class="num" data-num="3">3</button>
+            <button class="ops" data-ops="times">*</button>
+
+            <button class="num" data-num="0">0</button>
+            <button class="num" data-num=".">.</button>
+            <button class="equals" id="equals" data-result="">=</button>
+            <button class="ops" data-ops="divided by">/</button>
+        </div>
+    </div>
+
+    <div class="calculator-section" id="calorias">
+        <h2 class="calTitle">Calculadora de Calorias</h2>
+    </div>
+
+    <script src="imc.js"></script>
+    <script src="matCalc.js"></script>
+</body>
+</html>
